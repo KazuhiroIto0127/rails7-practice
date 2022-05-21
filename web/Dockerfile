@@ -15,7 +15,8 @@ RUN apk add \
     mysql-client \
     mysql-dev \
     tzdata \
-    git
+    git \
+    gcompat
 
 RUN gem install bundler
 RUN bundle install
