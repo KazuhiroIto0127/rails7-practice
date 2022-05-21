@@ -10,6 +10,6 @@
 8. docker-compose up -d
 
 # 参考にしたもの
-https://zenn.dev/yamadanobuhiko/articles/f9e89d69062cac
-https://ryotarch.com/docker/no-matching-manifest-for-linux-arm64-v8-on-m1-mac/
-https://zenn.dev/n04h/scraps/ccb7f7db9ff3d0
+- https://zenn.dev/yamadanobuhiko/articles/f9e89d69062cac
+- https://ryotarch.com/docker/no-matching-manifest-for-linux-arm64-v8-on-m1-mac/
+- https://zenn.dev/n04h/scraps/ccb7f7db9ff3d0
