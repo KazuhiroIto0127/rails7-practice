@@ -32,7 +32,8 @@ RUN apk update && \
     apk add \
         mysql-dev \
         tzdata \
-        bash
+        bash \
+        gcompat
 
 WORKDIR ${ROOT}
 
