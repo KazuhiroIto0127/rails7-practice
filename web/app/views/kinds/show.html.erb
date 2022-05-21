@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @kind %>
+
+<div>
+  <%= link_to "Edit this kind", edit_kind_path(@kind) %> |
+  <%= link_to "Back to kinds", kinds_path %>
+
+  <%= button_to "Destroy this kind", @kind, method: :delete %>
+</div>

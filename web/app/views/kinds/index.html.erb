@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Kinds</h1>
+
+<div id="kinds">
+  <% @kinds.each do |kind| %>
+    <%= render kind %>
+    <p>
+      <%= link_to "Show this kind", kind %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New kind", new_kind_path %>
