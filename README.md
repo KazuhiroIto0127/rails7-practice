@@ -5,6 +5,9 @@
 3. docker-compose run --rm web bundle exec rails _7.0.3_ new . -d mysql -f
 4. マルチステージビルドを利用。Dockerfileを更新して、entrypointを追加。
 5. docker-compose build (コンテナイメージを再ビルド)
+6. database.ymlを更新
+7. docker-compose run --rm web rails db:create
+8. docker-compose up -d
 
 # 参考にしたもの
 https://zenn.dev/yamadanobuhiko/articles/f9e89d69062cac
