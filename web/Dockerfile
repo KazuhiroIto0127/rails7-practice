@@ -20,3 +20,28 @@ RUN apk add \
 
 RUN gem install bundler
 RUN bundle install
+
+
+FROM ruby:3.1.1-alpine
+
+ENV ROOT="/app"
+ENV LANG=C.UTF-8
+ENV TZ=Asia/Tokyo
+
+RUN apk update && \
+    apk add \
+        mysql-dev \
+        tzdata \
+        bash
+
+WORKDIR ${ROOT}
+
+COPY --from=builder /usr/local/bundle /usr/local/bundle
+COPY . ${ROOT}
+COPY entrypoint.sh /usr/bin/
+
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
