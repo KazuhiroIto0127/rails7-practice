@@ -4,7 +4,7 @@
 
 1. docker-compose、dockerfile、gemfile、gemfile.lockを用意する
 2. docker-compose build
-3. docker-compose run --rm web bundle exec rails _7.0.3_ new . --css tailwind -d mysql -f
+3. docker-compose run --rm --no-deps web bundle exec rails new . --css tailwind -d mysql -f
 4. マルチステージビルドを利用。Dockerfileを更新して、entrypointを追加。
 5. docker-compose build (コンテナイメージを再ビルド)
 6. database.ymlを更新
