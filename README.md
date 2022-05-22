@@ -3,13 +3,11 @@
 ## rails serverが実行できるまで
 
 1. docker-compose、dockerfile、gemfile、gemfile.lockを用意する
-2. docker-compose build --no-cache
-3. docker-compose run web rails new . --no-deps --css tailwind -d mysql -f
-4. マルチステージビルドを利用。Dockerfileを更新して、entrypointを追加。
-5. docker-compose build (コンテナイメージを再ビルド)
-6. database.ymlを更新
-7. docker-compose run --rm web rails db:create
-8. docker-compose up -d
+2. docker-compose run web rails new . --no-deps --css tailwind -d mysql -f
+3. docker-compose build (コンテナイメージを再ビルド)
+4. database.ymlを更新
+5. docker-compose run --rm web rails db:create
+6. docker-compose up -d
 
 ## appで開発
 
@@ -28,3 +26,6 @@
 - https://ryotarch.com/docker/no-matching-manifest-for-linux-arm64-v8-on-m1-mac/
 - https://zenn.dev/n04h/scraps/ccb7f7db9ff3d0
 - https://qiita.com/tikaranimaru/items/70f87b1fe4b1e7166348
+
+## 問題解決
+- https://qiita.com/croquette0212/items/7b99d9339fd773ddf20b
