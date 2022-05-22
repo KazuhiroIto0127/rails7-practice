@@ -3,8 +3,8 @@
 ## rails serverが実行できるまで
 
 1. docker-compose、dockerfile、gemfile、gemfile.lockを用意する
-2. docker-compose build
-3. docker-compose run --rm --no-deps web bundle exec rails new . --css tailwind -d mysql -f
+2. docker-compose build --no-cache
+3. docker-compose run web rails new . --no-deps --css tailwind -d mysql -f
 4. マルチステージビルドを利用。Dockerfileを更新して、entrypointを追加。
 5. docker-compose build (コンテナイメージを再ビルド)
 6. database.ymlを更新
