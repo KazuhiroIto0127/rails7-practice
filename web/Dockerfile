@@ -1,4 +1,4 @@
-FROM ruby:3.1.1-alpine as builder
+FROM ruby:3.1.2-alpine as builder
 
 ENV ROOT="/app"
 ENV LANG=C.UTF-8
@@ -22,7 +22,7 @@ RUN gem install bundler
 RUN bundle install
 
 
-FROM ruby:3.1.1-alpine
+FROM ruby:3.1.2-alpine
 
 ENV ROOT="/app"
 ENV LANG=C.UTF-8

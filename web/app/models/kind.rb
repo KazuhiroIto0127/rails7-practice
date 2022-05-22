@@ -1,2 +1,0 @@
-class Kind < ApplicationRecord
-end
