@@ -6,7 +6,7 @@
 2. docker-compose run web rails new . --no-deps --css tailwind -d mysql -f
 3. docker-compose build (コンテナイメージを再ビルド)
 4. database.ymlを更新
-5. docker-compose run --rm web rails db:create
+5. docker-compose run web rails db:create
 6. docker-compose up -d
 
 ## appで開発
