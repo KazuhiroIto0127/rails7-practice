@@ -9,6 +9,9 @@
 5. docker-compose run web rails db:create
 6. docker-compose up -d
 
+### 起動中のコンテナへログインしてbashで操作（起動中のコンテナのみ）
+docker exec -i -t b7f85d27cbd0 bash
+
 ## appで開発
 
 - docker-compose run --rm web rails g scaffold kind name:string
@@ -17,9 +20,8 @@
 
 ## ransack、kaminariをインストール
 
-- docker-compose run --rm web bundle platform aarch64-linux
 - gemにransack、kaminariを追加
-- docker-compose run --rm web bundle install
+- docker-compose exec web bundle install
 
 # 参考にしたもの
 - https://zenn.dev/yamadanobuhiko/articles/f9e89d69062cac

@@ -3,7 +3,8 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    @q = Food.ransack(params[:q])
+    @foods = @q.result.includes(:kind).page(params[:page]).per(params[:per] || 6)
   end
 
   # GET /foods/1 or /foods/1.json
