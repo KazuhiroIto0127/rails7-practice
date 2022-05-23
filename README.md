@@ -13,7 +13,7 @@
 docker-compose exec web rails tailwindcss:watch
 
 ### 起動中のコンテナへログインしてbashで操作（起動中のコンテナのみ）
-docker exec -i -t b7f85d27cbd0 bash
+docker exec -it web bash
 
 ## appで開発
 
@@ -25,6 +25,10 @@ docker exec -i -t b7f85d27cbd0 bash
 
 - gemにransack、kaminariを追加
 - docker-compose exec web bundle install
+
+### kaminariのdefault viewを作成する
+
+- rails g kaminari:views default -e erb
 
 # 参考にしたもの
 - https://zenn.dev/yamadanobuhiko/articles/f9e89d69062cac
