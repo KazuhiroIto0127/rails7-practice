@@ -31,6 +31,7 @@ docker exec -i -t b7f85d27cbd0 bash
 - https://ryotarch.com/docker/no-matching-manifest-for-linux-arm64-v8-on-m1-mac/
 - https://zenn.dev/n04h/scraps/ccb7f7db9ff3d0
 - https://qiita.com/tikaranimaru/items/70f87b1fe4b1e7166348
+- https://zenn.dev/seuyu_bin/articles/bfdcdc46b36a42
 
 ## 問題解決
 - https://qiita.com/croquette0212/items/7b99d9339fd773ddf20b
