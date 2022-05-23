@@ -1,23 +1,21 @@
-<div class="col-span-12 md:col-span-6" id="<%= dom_id food %>">
-  <div class="max-w-xs rounded shadow-2xl">
-    <div class="card-body">
-      <p class="my-5 text-xl">
-        <%= food.name %>
-        <span class="badge badge-lg badge-accent badge-outline">
-          <%= food.kind.name %>
-        </span>
-      </p>
+<div class="max-w-sm rounded-md bg-white p-3 shadow-md" id="<%= dom_id food %>">
+  <div class="">
+    <p class="my-5 text-xl">
+      <%= food.name %>
+      <span class="badge badge-lg badge-accent badge-outline">
+        <%= food.kind.name %>
+      </span>
+    </p>
 
 
-      <h2 class="mt-2">
-        <%= "¥ #{food.price}" %>
-      </h2>
-      <p>
-        <%= food.memo %>
-      </p>
-      <div class="justify-end card-actions">
-        <%= link_to 'Edit', edit_food_path(food), class: "btn btn-outline btn-primary" %>
-      </div>
+    <h2 class="mt-2">
+      <%= "¥ #{food.price}" %>
+    </h2>
+    <p>
+      <%= food.memo %>
+    </p>
+    <div class="justify-end card-actions">
+      <%= link_to 'Edit', edit_food_path(food), class: "btn btn-outline btn-primary" %>
     </div>
   </div>
 </div>

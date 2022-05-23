@@ -9,6 +9,9 @@
 5. docker-compose run web rails db:create
 6. docker-compose up -d
 
+## tailwindの自動ビルド
+docker-compose exec web rails tailwindcss:watch
+
 ### 起動中のコンテナへログインしてbashで操作（起動中のコンテナのみ）
 docker exec -i -t b7f85d27cbd0 bash
 
