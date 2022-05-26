@@ -39,3 +39,6 @@ docker exec -it web bash
 
 ## 問題解決
 - https://qiita.com/croquette0212/items/7b99d9339fd773ddf20b
+
+# Rails7
+- https://qiita.com/tikaranimaru/items/f83e04aab35c51c46c09

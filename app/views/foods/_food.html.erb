@@ -1,21 +1,18 @@
-<div class="max-w-sm rounded-md bg-white p-3 shadow-md" id="<%= dom_id food %>">
-  <div class="">
-    <p class="my-5 text-xl">
-      <%= food.name %>
-      <span class="badge badge-lg badge-accent badge-outline">
-        <%= food.kind.name %>
-      </span>
-    </p>
-
-
-    <h2 class="mt-2">
-      <%= "¥ #{food.price}" %>
-    </h2>
-    <p>
-      <%= food.memo %>
-    </p>
-    <div class="justify-end card-actions">
-      <%= link_to 'Edit', edit_food_path(food), class: "rounded-full bg-blue-200 px-5 py-1" %>
+<div class="container rounded-md bg-white p-3 shadow-md" id="<%= dom_id food %>">
+  <p class="my-5 text-xl">
+    <%= food.name %>
+    <div class="bg-yellow-100 text-yellow-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-yellow-200 dark:text-yellow-900">
+      <%= food.kind.name %>
     </div>
+  </p>
+
+  <h2 class="mt-2">
+    <%= "¥ #{food.price}" %>
+  </h2>
+  <p>
+    <%= food.memo %>
+  </p>
+  <div class="flex justify-end">
+    <%= link_to '編集', edit_food_path(food), class: "rounded-full bg-green-200 px-5 py-1" %>
   </div>
 </div>
